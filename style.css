@@ -1,0 +1,341 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+
+
+
+
+
+/* CODE FOR HEADER THAT WILL BE OUR NAVBAR */
+.navbar{
+display: flex;
+flex-wrap: nowrap;
+justify-content: space-around;
+background-color:hsla(212, 90%, 63%, 0.959);
+}
+.navleft{  display: flex;
+    color: white;
+    font-size: 2em;
+    
+    flex: 1;
+    margin: 30px;
+    justify-content: space-between;
+}
+ul{top: 20px;
+    list-style: none;
+        display: flex;
+        justify-content: center;
+    align-items: centre;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: "Playfair Display SC", serif;
+    font-weight: 900;
+    justify-content: space-between;
+    font-style: normal;
+         margin: 10px;  
+}
+li{
+    margin: 30px;
+}
+a{ text-decoration: none;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+#sunny{
+    font-family: "Playfair Display SC", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+/* NAVBAR STYLING END */
+
+/*text over the images orange it is simple just follow this steps
+1 set image to be responsice or fixed through max width 100 and height to the auto
+2  then postion to relative of image 
+3  then text to the aboslute and to postion use top and left property*/
+.imge{
+    position: relative;
+}
+.imge,img{
+     max-width: 100%;     /*this is used to set picture as it is or to show  */
+    height: auto;
+    min-width: 100px;
+}
+
+
+.text-img{
+position: absolute;
+top: 15%; /*this is used to overlay the text over the image , first imgae into relative and then text postion as absoute and then write top*/
+left: 50%;
+transform: translateX(-50%);
+color: white;
+}
+h4{
+     -ms-flex-align: center;
+    font-size: 60px;
+    align-self: center;
+    font-family: "Playfair Display SC", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+
+/* grid understanding */
+/* in a grid lets understand how it works
+1 u have to make a container 
+2 u have to use or make items which will reside in container,
+   thus there will be many grid items and we give many class as grid item
+   along with more name inside div so we can apply unique properties
+   for eg we have a made a grid container and inside it we have
+   give a div a class named as div item along with a unique name of class 
+   like we gave text box
+3 we have see have a we have first template we have to define the struture
+  in the main container for eg in below we have grid container you have to 
+  define the template and there are two things which are rows and columns
+4  for child items have we have grid row and columns eg grid-auto- column and they are used to position the grid items 
+eg grid row start: start 1 and
+    grid column end :3 by this the block will be allotted 
+5 imp thing in inspect we can watch the grid and postion of itself*/
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 0;
+    height: 250vh;
+}
+/*here i used minmax but it was not giving right answer why grid-template-columns: repeat(5, 1fr); In the example above, the repeat() function lets us specify how many columns we want ( 5 ), and what size they should all be ( 1fr — or one fraction of the available space)he CSS Grid specifications is the minmax() function. This function opens a door and allows us to write stronger and more concise CSS by providing us the option to set a minimum and maximum value for columns and rows in our grid. */
+ /*now this selector is applied to many tag and use in many divthats why we use it */
+ .grid-item{
+    display: flex;
+    justify-content: center;
+    align-items: centre;
+    text-align: center;
+    padding: 20px;
+}
+.text-box /*now we use textbox but why its because we can apply unique styling which we will be unique for that div*/
+{
+/*now styling the text inside the grid item*/
+background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+}
+.text-box  h1{
+ margin: 0 0 20px 0;/*If the margin property has four value margin: 10px 5px 15px 20px;top margin is 10px right margin is 5px bottom margin is 15px left margin is 20px */
+font-size: 2em;
+text-align: start;
+}
+.text-box p{
+    margin: 0 0 20px 0;
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: left;
+    
+}
+.text-box a {
+    font-size: 1em;
+    color: #000;
+    text-decoration: none;
+    
+    color: black;
+    
+}
+.img-box{
+    background-size: cover;
+    background-position: center;
+}
+.egg{
+    background-image: url(images/desktop/image-transform.jpg);
+    /* background-color: #ffeb3b; */
+}
+.glass{
+    background-image: url(images/desktop/image-stand-out.jpg);
+}
+.cherry{
+    background-image: url(images/desktop/image-graphic-design.jpg);
+}
+.orange{
+    background-image: url(images/desktop/image-gallery-orange.jpg);
+}
+
+/*--------------------------------------------------------------------------*/
+
+.testimonials{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+    
+}
+.testimonials h2{
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: grey;
+}
+.testimonial{
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin:20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+}
+.testimonial img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+.testimonial p{
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #333;
+}
+.testimonial span{
+    font-size: 0.9em;
+    color: #777;
+}
+.testimonials .testimonial-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* <!------------------------------------------------------> */
+.fourpic{
+    display: flex;
+
+}
+
+footer {
+    background-color: #80C4A8;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.footer-nav,
+.social-media {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-nav a,
+.social-media a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0;
+    height: 100vh;
+}
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.text-box {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+.text-box h1 {
+    margin: 0 0 20px 0;
+    font-size: 2em;
+}
+
+.text-box p {
+    margin: 0 0 20px 0;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.text-box a {
+    font-size: 1em;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.text-box a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.image-box {
+    background-size: cover;
+    background-position: center;
+}
+
+.egg {
+    background-image: url('images/desktop/image-transform.jpg');
+    background-color: #ffeb3b;
+} */
